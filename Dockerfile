@@ -2,6 +2,8 @@ FROM debian:9
 
 LABEL maintainer="simon@widgit.com"
 
+ENV DEBIAN_FRONTEND=noninteractive
+
 RUN apt-get -y update && \
     apt-get -y install wget build-essential xorg && \
     wget -O /tmp/vmware-install.bundle http://www.vmware.com/go/tryworkstation-linux-64 && \
